@@ -5,5 +5,4 @@ RUN sed -e 's/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g'
 RUN cat /etc/sudoers
 RUN addgroup -g 1000 -S developer && \
     adduser -u 1000 -S developer -G wheel -s /bin/bash
-USER developer
 
