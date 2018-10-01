@@ -1,5 +1,5 @@
 FROM ruby:2.5.1-alpine
-RUN apk add --no-cache bash unison openssh wget curl sudo git alpine-sdk
+RUN apk add --no-cache bash unison openssh wget curl sudo git alpine-sdk linux-headers
 RUN sed -e 's/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/g' \
           -i /etc/sudoers
 RUN cat /etc/sudoers
